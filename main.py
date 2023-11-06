@@ -51,7 +51,7 @@ async def on_error(event: lightbulb.CommandErrorEvent) -> None:
         await event.context.respond("Ein Fehler ist aufgetreten. <@{}>".format(DevID), user_mentions=True)
         raise event.exception
 
-bot.listen(hikari.GuildMessageCreateEvent)
+@bot.listen(hikari.GuildMessageCreateEvent)
 async def on_message(message: hikari.MessageEvent) -> None:
     if message.author.id != BotID:
         if message.content is not None:
@@ -59,7 +59,7 @@ async def on_message(message: hikari.MessageEvent) -> None:
             channel = message.get_channel()
             guild = message.get_guild()
             category = guild.get_channel(channel.parent_id)
-            if category.name.lower() in ["ooc", "spam", "charakter zeug"]:
+            if category.name.lower() in ["team stuff uwu", "allgemein", "charaktere", "voice channelsx"]:
                 if "rico" in nachricht or "rigge" in nachricht:
                     if message.author.id != 123825591161061380:
                         banngifs = ["https://tenor.com/view/ban-button-keyboard-press-the-ban-button-gif-16387934", "https://tenor.com/view/subscribe-to-my-onlyfans-onlybans-banned-ban-gif-20504981", "https://tenor.com/view/bongocat-banhammer-ban-hammer-bongo-gif-18219363", "https://tenor.com/view/when-your-team-too-good-ban-salt-bae-gif-7580925", "https://tenor.com/view/spongebob-ban-pubg-lite-banned-rainbow-gif-16212382", "https://tenor.com/view/bane-no-banned-and-you-are-explode-gif-16047504"]
