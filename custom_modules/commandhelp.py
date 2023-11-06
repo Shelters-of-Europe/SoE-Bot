@@ -1,7 +1,7 @@
 def command_help(command="help"):
     
     match (command):
-        case "helpslash":
+        case "help-slash":
             return "Dieser Befehl. Zeigt Hilfe für den angegebenen Befehl.\nSyntax: /help befehl:(BEFEHL)\n\nNutze '/help commands' um eine Liste aller Befehle zu erhalten."
         case "help":
             return "Dieser Befehl. Zeigt Hilfe für den angegebenen Befehl.\nSyntax: %help (BEFEHL)\n\nNutze 'help commands' um eine Liste aller Befehle zu erhalten."
@@ -17,5 +17,14 @@ def command_help(command="help"):
             return "Nur ein kleiner Test Befehl"
         case "farbrolle":
             return "Gibt dem Nutzer eine Farbrolle oder bearbeitet sie. Die Farbe kann mit oder ohne # genannt werden und ist als Hex Code einzugeben. Der Standard ist Weiß. \nSyntax: %farbrolle (FARBE)"
+        case "commands":
+
+            returnText = "Hier ist eine Liste aller Befehle:\n"
+            for command in commands:
+                returnText += "{}\n".format(command)
+            return returnText
+        
         case _:
             return "Unbekannter Befehl"
+
+commands = ( "help-slash", "help", "setlogs", "database", "reminder", "commandtoggle", "soe", "farbrolle", "farbrolle-slash")
