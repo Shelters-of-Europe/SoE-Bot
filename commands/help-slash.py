@@ -2,12 +2,12 @@ import  hikari
 import  lightbulb
 from    cmd_log     import cmd_log
 from    permcheck   import permcheck
-from    commandhelp import  command_help
+from    commandhelp import command_help
 
 plugin = lightbulb.Plugin("Help")
 
 @plugin.command()
-@lightbulb.option("command", "Der Befehl zu dem du Hilfe brauchst", default="help")
+@lightbulb.option("command", "Der Befehl zu dem du Hilfe brauchst", default="help", )
 @lightbulb.command("help", "Hilfe zu Commands")
 @lightbulb.implements(lightbulb.SlashCommand)
 async def help(ctx: lightbulb.Context) -> None:
