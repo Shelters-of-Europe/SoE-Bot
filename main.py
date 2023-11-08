@@ -67,7 +67,7 @@ async def on_message(message: hikari.MessageEvent) -> None:
     if category.name.lower() not in ["team stuff uwu", "allgemein", "charaktere", "voice channelsx"]:
         return
     
-    if "rico" in nachricht or "rigge" not in nachricht:
+    if "rico" in nachricht or "rigge" in nachricht:
         if message.author.id != 123825591161061380:
             banngifs = ["https://tenor.com/view/ban-button-keyboard-press-the-ban-button-gif-16387934", 
                         "https://tenor.com/view/subscribe-to-my-onlyfans-onlybans-banned-ban-gif-20504981", 
