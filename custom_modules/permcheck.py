@@ -38,6 +38,11 @@ async def permcheck(ctx=None, adminrequired=False):
                 else:
                     return False
             except AttributeError:
+                guild_id = ctx.guild_id
+
+                
+
+
                 if ctx.event.interaction.permissions_for(ctx.author).administrator:
                     return True
                 else:
